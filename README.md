@@ -1,4 +1,4 @@
-DIVA_paper_subsidence
+DIVA_paper_uncertainty
 
 This repository contains the data and the scripts used to create results, figures and tables in the paper "Unravelling the importance of uncertainties in global-scale coastal flood risk assessments under sea level rise" by J. Rohmer et al. published in Water (DOI-link to follow).
 
