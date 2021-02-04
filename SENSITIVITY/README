@@ -1,0 +1,24 @@
+**************************************************************
+This directory includes
+1) A "DATA" sub-directory including:
+	- the results of the DIVA simulations "global_output.csv"
+	- the definition of the different input scenarios "cases.csv"
+	- the data extracted from Fig. 6 of Riahi et al. (2017): carbon_intensity.txt & energy_intensity.txt
+
+2) A "UTILS" sub-directory including the R function to compute the local Sobol indices (see Appendix B of the manuscript)
+
+3) A "SENSI_RESULTS" sub-directory including the GSA results (RData format) used in the manuscript
+
+4) The R script "run_read.R" for reading the DIVA results and formatting it for performing the analysis
+
+5) The R script "run_RF_sensitivity.R" for performing Global Sensitivity Analysis from DIVA RESULTS (formatted using run_read.R) using RF models (see APPENDIX A of the manuscrit)
+and local Sobol indices (see Appendix B of the manuscrit)
+
+6) The R script "run_plot.R" for reproducing Figs. 3 and 4 using the files in "RESULTS"
+
+**************************************************************
+The steps of the analysis are:
+Step 1) Prepare the files "global_output.csv" (by running DIVA) and  "cases.csv"
+Step 2) Run R script "run_read.R": this will save the DIVA formatted results
+Step 3) Run R script "run_RF_sensitivity.R" : this will use the output of Step 2) and will compute the matrix of sensitivity measure SS
+Step 4) Run R script "run_plot.R"  : this will use the output of Step 3) and will plot the evolution of the sensitivity measure over time
